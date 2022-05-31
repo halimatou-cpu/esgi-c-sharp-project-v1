@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 25.0.1700.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "projectv1", "projectv1\projectv1.csproj", "{90FEB23B-A483-4EFD-8E5B-F0E0B78DEBAB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatternProject", "..\DesignPatternProject\DesignPatternProject\DesignPatternProject.csproj", "{AA882E5E-8B88-4B90-A116-F3C3C634BABB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{90FEB23B-A483-4EFD-8E5B-F0E0B78DEBAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{90FEB23B-A483-4EFD-8E5B-F0E0B78DEBAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{90FEB23B-A483-4EFD-8E5B-F0E0B78DEBAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{90FEB23B-A483-4EFD-8E5B-F0E0B78DEBAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA882E5E-8B88-4B90-A116-F3C3C634BABB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA882E5E-8B88-4B90-A116-F3C3C634BABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA882E5E-8B88-4B90-A116-F3C3C634BABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA882E5E-8B88-4B90-A116-F3C3C634BABB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
