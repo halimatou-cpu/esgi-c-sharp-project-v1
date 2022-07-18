@@ -18,7 +18,7 @@ public class BillGenerator
         {
             foreach (Sandwich sn in _sandwichCommand.CommandList)
             {
-                this._totalPrice += sn.Price;
+                this._totalPrice += sn.Price.Value;
             }
         }
         else
@@ -29,6 +29,7 @@ public class BillGenerator
 
     public override string? ToString()
     {
-        return _sandwichCommand.ToString() + "Prix total = " + _totalPrice + "€";
+        string currency = _sandwichCommand.CommandList[0].Price.Currency;
+        return _sandwichCommand.ToString() + "Prix total = " + _totalPrice + currency;
     }
 }

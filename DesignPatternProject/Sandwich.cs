@@ -11,9 +11,9 @@ public class Sandwich
         set => _name = value;
     }
 
-    private float _price;
+    private Price _price;
 
-    public float Price
+    public Price Price
     {
         get => _price;
         set => _price = value;
@@ -27,7 +27,7 @@ public class Sandwich
         set => _ingredients = value;
     }
 
-    public Sandwich(string name, float price, List<string> ingredients)
+    public Sandwich(string name, Price price, List<string> ingredients)
     {
         this._name = name;
         this._price = price;

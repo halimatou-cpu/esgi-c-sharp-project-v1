@@ -17,7 +17,7 @@ class Program
         do
         {
             Console.WriteLine(
-                "############### Appuyer sur la touche correspondate pour faire votre commande. ###############");
+                "############### Appuyer sur la touche correspondante pour faire votre commande. ###############");
             Console.WriteLine("(a) pour Jambon beurre");
             Console.WriteLine("(b) pour Poulet crudités");
             Console.WriteLine("(c) pour Dieppois");
