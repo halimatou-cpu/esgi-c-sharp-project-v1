@@ -30,11 +30,25 @@ public class SandwichCommand
         return _commandList.Count > 0;
     }
 
+    public int SandwichOccurence(Sandwich occuredSandwich)
+    {
+        int occurence = 0;
+        foreach(Sandwich sandwich in CommandList)
+        {
+            if (sandwich.Equals(occuredSandwich))
+            {
+                occurence += 1;
+            }
+        }
+        return occurence;
+    }
+
     public override string? ToString()
     {
         string commandListToString = "";
         foreach(Sandwich sandwich in _commandList)
         {
+            
             commandListToString += sandwich.ToString() + "\n";
         }
         return commandListToString;
