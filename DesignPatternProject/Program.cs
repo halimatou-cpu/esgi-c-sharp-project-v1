@@ -36,7 +36,7 @@ class Program
         SandwichCommand sandwichCommand = new SandwichCommand();
 
         while (choice != "d")
-        {            
+        {
             sandwichCommand.AddSandwich(SandwichFactory.Of(choice));
             choice = MakeCommandDashbord();
         } 

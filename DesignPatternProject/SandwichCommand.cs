@@ -9,38 +9,38 @@ public class SandwichCommand
         get => _commandList;
         set => _commandList = value;
     }
-   
+
     public SandwichCommand()
     {
         _commandList = new List<Sandwich>();
     }
 
-    public bool ContainsSandwich(Sandwich other)
+    public int ContainsSandwich(Sandwich other)
     {
-        foreach(Sandwich sandwich in this._commandList)
+        for (int i = 0; i < this._commandList.Count; i++)
         {
-            if (sandwich.Equals(other))
+            Sandwich sandwich = this._commandList[i];
+            //if (sandwich.Equals(other))
+            if (sandwich.Name.Equals(other.Name))
             {
-                Console.WriteLine("Same sandwich choosed");
-                sandwich.IncreaseQuantityBy(1);
-                return true;
+                return i;
             }
         }
-        return false;
+        return -1;
     }
-
 
     public void AddSandwich(Sandwich sandwich)
     {
-        if (this.ContainsSandwich(sandwich)) {
-            sandwich.IncreaseQuantityBy(1);
-
-           
-        }else
+        int sandwichOccurenceIndex = this.ContainsSandwich(sandwich);
+        if (sandwichOccurenceIndex >= 0)
         {
-            sandwich.IncreaseQuantityBy(1);
+            this._commandList[sandwichOccurenceIndex].IncreaseQuantityBy(1);
+        }
+        else
+        {
             this._commandList.Add(sandwich);
-        }        
+            this._commandList.Last().IncreaseQuantityBy(1);
+        }
     }
 
     public void RemoveTheLastAddedSandwich()
@@ -56,8 +56,8 @@ public class SandwichCommand
     public override string? ToString()
     {
         string commandListToString = "";
-        foreach(Sandwich sandwich in _commandList)
-        {            
+        foreach (Sandwich sandwich in _commandList)
+        {
             commandListToString += sandwich.ToString() + "\n";
         }
         return commandListToString;

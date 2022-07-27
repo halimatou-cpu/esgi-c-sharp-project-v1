@@ -18,15 +18,15 @@ public class Price
 
     public string Currency { get; set; }
 
-    public override bool Equals(object? obj)
-    {
-        if (obj == null)
-        {
-            return false;
-        }
+    //public override bool Equals(object? obj)
+    //{
+    //    if (obj == null)
+    //    {
+    //        return false;
+    //    }
 
-        Price other = (Price) obj;
+    //    Price other = (Price) obj;
 
-        return other._value == this._value && other.Currency.Equals(this.Currency);
-    }
+    //    return other._value == this._value && other.Currency.Equals(this.Currency);
+    //}
 }
