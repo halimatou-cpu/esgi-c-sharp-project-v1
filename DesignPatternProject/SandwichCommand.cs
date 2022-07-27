@@ -32,6 +32,11 @@ public class SandwichCommand
 
     public override string? ToString()
     {
-        return _commandList.ToString();
+        string commandListToString = "";
+        foreach(Sandwich sandwich in _commandList)
+        {
+            commandListToString += sandwich.ToString() + "\n";
+        }
+        return commandListToString;
     }
 }

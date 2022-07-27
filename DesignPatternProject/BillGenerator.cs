@@ -29,6 +29,10 @@ public class BillGenerator
 
     public override string? ToString()
     {
+        if(_sandwichCommand.CommandList.Count == 0)
+        {
+            return "Vous n'avez rien commandé !";
+        }
         string currency = _sandwichCommand.CommandList[0].Price.Currency;
         return _sandwichCommand.ToString() + "Prix total = " + _totalPrice + currency;
     }

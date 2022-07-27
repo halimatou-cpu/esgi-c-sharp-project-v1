@@ -2,9 +2,9 @@ namespace DesignPatternProject;
 
 public abstract class SandwichFactory
 {
-    public static Sandwich Of(String commande)
+    public static Sandwich Of(string commande)
     {
-        String choice = commande.ToUpper().Substring(0, 1);
+        string choice = commande.ToUpper().Substring(0, 1);
         if (choice.Equals("A"))
         {
             return new SandwichBuilder()
@@ -32,6 +32,8 @@ public abstract class SandwichFactory
                     { "1 pain", "5g de thon", "0.5 tomate",  "10g de mayonnaise", "10g de salade" })
                 .Build();
         }
+        Console.WriteLine(
+                "######### Merci de faire une saisie valide #######");
         throw new ArgumentException();
     }
 }

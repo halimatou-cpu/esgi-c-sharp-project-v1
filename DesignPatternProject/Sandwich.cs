@@ -42,7 +42,7 @@ public class Sandwich
             sn.Append(ing + "\n \t");
         }
 
-        return this._name + "\n" + sn;
+        return this._name + "\n \t" + sn;
 
     }
 }
