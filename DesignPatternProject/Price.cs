@@ -3,12 +3,11 @@ namespace DesignPatternProject;
 public class Price
 {
     private float _value;
-    private string _currency;
 
     public Price(float value, string currency)
     {
         this._value = value;
-        this._currency = currency;
+        this.Currency = currency;
     }
 
     public float Value
@@ -17,9 +16,17 @@ public class Price
         set => _value = value;
     }
 
-    public string Currency
+    public string Currency { get; set; }
+
+    public override bool Equals(object? obj)
     {
-        get => _currency;
-        set => _currency = value;
+        if (obj == null)
+        {
+            return false;
+        }
+
+        Price other = (Price) obj;
+
+        return other._value == this._value && other.Currency.Equals(this.Currency);
     }
 }

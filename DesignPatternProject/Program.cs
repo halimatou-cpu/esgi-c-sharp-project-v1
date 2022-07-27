@@ -45,6 +45,8 @@ class Program
         Console.WriteLine("******************Facture****************");
         billGenerator.CalculateTotalPrice();
         Console.WriteLine(billGenerator.ToString());
+        Console.WriteLine("Commanlist length = " + sandwichCommand.CommandList.Count);
+        Thread.Sleep(2000);
         Console.WriteLine(
                 "############### Appuyer sur la touche correspondante pour faire une nouvelle commande. ###############");
         CommandChoice(MakeCommandDashbord());

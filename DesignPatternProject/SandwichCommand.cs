@@ -3,6 +3,7 @@ namespace DesignPatternProject;
 public class SandwichCommand
 {
     private List<Sandwich> _commandList;
+
     public List<Sandwich> CommandList
     {
         get => _commandList;
@@ -14,10 +15,32 @@ public class SandwichCommand
         _commandList = new List<Sandwich>();
     }
 
+    public bool ContainsSandwich(Sandwich other)
+    {
+        foreach(Sandwich sandwich in this._commandList)
+        {
+            if (sandwich.Equals(other))
+            {
+                Console.WriteLine("Same sandwich choosed");
+                sandwich.IncreaseQuantityBy(1);
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     public void AddSandwich(Sandwich sandwich)
     {
-        this._commandList.Add(sandwich);
+        if (this.ContainsSandwich(sandwich)) {
+            sandwich.IncreaseQuantityBy(1);
+
+           
+        }else
+        {
+            sandwich.IncreaseQuantityBy(1);
+            this._commandList.Add(sandwich);
+        }        
     }
 
     public void RemoveTheLastAddedSandwich()
@@ -30,25 +53,11 @@ public class SandwichCommand
         return _commandList.Count > 0;
     }
 
-    public int SandwichOccurence(Sandwich occuredSandwich)
-    {
-        int occurence = 0;
-        foreach(Sandwich sandwich in CommandList)
-        {
-            if (sandwich.Equals(occuredSandwich))
-            {
-                occurence += 1;
-            }
-        }
-        return occurence;
-    }
-
     public override string? ToString()
     {
         string commandListToString = "";
         foreach(Sandwich sandwich in _commandList)
-        {
-            
+        {            
             commandListToString += sandwich.ToString() + "\n";
         }
         return commandListToString;
